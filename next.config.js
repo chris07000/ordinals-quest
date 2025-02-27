@@ -2,10 +2,11 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true
+    unoptimized: true,
+    loader: 'custom',
+    path: '/'
   },
-  trailingSlash: true,
-  assetPrefix: '.'
+  distDir: 'out'
 }
 
 module.exports = nextConfig 
