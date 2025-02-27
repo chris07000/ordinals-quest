@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { imageLoader } from '../utils/imageLoader'
 
 // Countdown component separated
 const CountdownDisplay = ({ timeLeft }: { timeLeft: { days: string, hours: string, minutes: string, seconds: string } }) => (
@@ -30,6 +31,7 @@ const CountdownDisplay = ({ timeLeft }: { timeLeft: { days: string, hours: strin
 const StaticKey = () => (
   <div className="relative w-32 h-32 mx-auto mb-8">
     <Image
+      loader={imageLoader}
       src="/images/pixel-key.png"
       alt="Pixel Key"
       width={128}
@@ -81,6 +83,7 @@ export default function Home() {
           <div className="mb-16">
             <div className="w-32 h-32 mx-auto mb-8">
               <Image
+                loader={imageLoader}
                 src="/images/btc-logo.png"
                 alt="Bitcoin Tiger Collective Logo"
                 width={128}
